@@ -1,0 +1,30 @@
+//Java supports a special block, called static block (also called static clause) which can be used for static initializations of a class. This code inside static block is executed only once: the first time the class is loaded into memory.
+
+import java.util.*;
+
+public class Solution {
+static int B,H;
+static boolean flag;
+//static block will execute once when class is loaded into the memory 
+static{
+
+    flag=false;Scanner sc=new Scanner(System.in);
+    B=sc.nextInt();
+    H=sc.nextInt();
+if(B>0 && H>0)
+flag=true;
+else{
+System.out.println("java.lang.Exception: Breadth and height must be positive");
+}
+}
+
+public static void main(String[] args){
+		if(flag){
+			int area=B*H;
+			System.out.print(area);
+		}
+		
+	}//end of main
+
+}//end of class
+
